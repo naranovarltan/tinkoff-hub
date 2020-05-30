@@ -1,0 +1,11 @@
+version: '2'
+services:
+  tinkoffhub-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/tinkoffHub/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=tinkoffHub
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432

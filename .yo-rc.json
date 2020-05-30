@@ -1,0 +1,47 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "me.antandtim.tinkoff.hub"
+    },
+    "jhipsterVersion": "6.8.0",
+    "applicationType": "monolith",
+    "baseName": "tinkoffHub",
+    "packageName": "me.antandtim.tinkoff.hub",
+    "packageFolder": "me/antandtim/tinkoff/hub",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YjA2MTE4NDcxMzMzMDNkOGUzYzRlNGE0MGY5MTdkODUyMjk0M2VhNWRlNGRkYzJlMTkzNzBmNGEyM2JiZTk1M2JmMDkwNWE5NWJjN2NmMDE5OWJjNWYxMjhjZjAyZDY5M2VkZThiNWEzNzNhYTczMDVkMDJlOTMzOGI0ZTA0Zjc=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "creationTimestamp": 1590816260959,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.6.0"
+      }
+    ],
+    "enableTranslation": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.6.0"
+      }
+    ]
+  }
+}
