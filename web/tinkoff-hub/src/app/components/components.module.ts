@@ -8,10 +8,11 @@ import { PostComponent } from './dump/post/post.component';
 const COMPONENTS = [
   FeedsHeaderComponent,
   MenuTabsComponent,
+  PostComponent,
 ];
 
 @NgModule({
-  declarations: [...COMPONENTS, PostComponent],
+  declarations: [...COMPONENTS],
   imports: [CommonModule, RouterModule],
   exports: [...COMPONENTS]
 })
