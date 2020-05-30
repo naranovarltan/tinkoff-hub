@@ -20,11 +20,11 @@ export class MenuTabsComponent {
       link: PathConfig.WORKING_NEWS,
     },
     {
-      name: 'Каналы по интересам',
+      name: 'Мои каналы',
       link: PathConfig.CHANNELS,
     },
     {
-      name: 'Мой блок',
+      name: 'Мой блог',
       link: PathConfig.BLOG,
     }
   ];

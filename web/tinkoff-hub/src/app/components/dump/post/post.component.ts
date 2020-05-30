@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { tuiIconPin, tuiIconArrowRight } from '@tinkoff-ui/angular-icons';
 
 @Component({
   selector: 'app-post',
@@ -6,4 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./post.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PostComponent {}
+export class PostComponent {
+  public tuiIconPin = tuiIconPin;
+  public tuiIconArrowRight = tuiIconArrowRight;
+}

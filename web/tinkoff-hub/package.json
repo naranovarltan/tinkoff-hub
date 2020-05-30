@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "angular2-text-mask": "^9.0.0",
     "core-js": "^2.5.4",
     "css-vars-ponyfill": "^2.3.1",
     "rxjs": "~6.5.5",

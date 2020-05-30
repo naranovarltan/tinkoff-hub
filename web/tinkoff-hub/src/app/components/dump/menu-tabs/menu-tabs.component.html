@@ -1,8 +1,12 @@
-<a
-  *ngFor="let tab of menuTabs"
-  [routerLink]="tab.link"
-  routerLinkActive="active"
-  class="menu-tab">
+<tui-tabs tuiMode="light" class="tabs">
+  <div class="tui-container tui-container_adaptive container">
+    <a
+      *ngFor="let tab of menuTabs"
+      [routerLink]="tab.link"
+      routerLinkActive="active"
+      tuiTab>
 
-  {{ tab.name }}
-</a>
+      {{ tab.name }}
+    </a>
+  </div>
+</tui-tabs>
