@@ -1,11 +1,8 @@
 package me.antandtim.tinkoff.hub.domain
 
-
-
+import java.io.Serializable
 import javax.persistence.*
 import javax.validation.constraints.*
-
-import java.io.Serializable
 
 /**
  * A Badge.
@@ -47,7 +44,6 @@ data class Badge(
         ", visible='$visible'" +
         ", description='$description'" +
         "}"
-
 
     companion object {
         private const val serialVersionUID = 1L

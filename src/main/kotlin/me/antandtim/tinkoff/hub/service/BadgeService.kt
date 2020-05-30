@@ -1,15 +1,13 @@
 package me.antandtim.tinkoff.hub.service
+import java.util.Optional
 import me.antandtim.tinkoff.hub.domain.Badge
 import me.antandtim.tinkoff.hub.repository.BadgeRepository
 import me.antandtim.tinkoff.hub.repository.MediaContentRepository
 import me.antandtim.tinkoff.hub.service.dto.BadgeDTO
 import me.antandtim.tinkoff.hub.service.mapper.BadgeMapper
 import org.slf4j.LoggerFactory
-
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-
-import java.util.Optional
 
 /**
  * Service Implementation for managing [Badge].
@@ -37,7 +35,7 @@ class BadgeService(
         val mediaContentId = badgeDTO.imageId
         if (mediaContentId != null) {
             mediaContentRepository.findById(mediaContentId)
-                .ifPresent { badge.mediaContent = it }
+                .ifPresent { badge.image = it }
         }
         badge = badgeRepository.save(badge)
         return badgeMapper.toDto(badge)

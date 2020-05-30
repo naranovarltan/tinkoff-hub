@@ -1,15 +1,14 @@
 package me.antandtim.tinkoff.hub.web.rest
 
 import me.antandtim.tinkoff.hub.TinkoffHubApp
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
 import org.mockito.MockitoAnnotations
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.setup.MockMvcBuilders
-
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
+import org.springframework.test.web.servlet.setup.MockMvcBuilders
 /**
  * Test class for the TestResource REST controller.
  *
@@ -39,5 +38,4 @@ class TestResourceIT {
         restMockMvc.perform(get("/api/test/test-method"))
             .andExpect(status().isOk)
     }
-
 }

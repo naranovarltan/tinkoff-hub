@@ -1,16 +1,15 @@
 package me.antandtim.tinkoff.hub.web.rest
 
+import javax.persistence.EntityManager
+import kotlin.test.assertNotNull
 import me.antandtim.tinkoff.hub.TinkoffHubApp
 import me.antandtim.tinkoff.hub.domain.Badge
 import me.antandtim.tinkoff.hub.domain.MediaContent
 import me.antandtim.tinkoff.hub.repository.BadgeRepository
 import me.antandtim.tinkoff.hub.service.BadgeService
-import me.antandtim.tinkoff.hub.service.dto.BadgeDTO
 import me.antandtim.tinkoff.hub.service.mapper.BadgeMapper
 import me.antandtim.tinkoff.hub.web.rest.errors.ExceptionTranslator
-
-import kotlin.test.assertNotNull
-
+import org.hamcrest.Matchers.hasItem
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.MockitoAnnotations
@@ -20,21 +19,13 @@ import org.springframework.data.web.PageableHandlerMethodArgumentResolver
 import org.springframework.http.MediaType
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
 import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.setup.MockMvcBuilders
-import org.springframework.transaction.annotation.Transactional
-import org.springframework.validation.Validator
-import javax.persistence.EntityManager
-
-import org.assertj.core.api.Assertions.assertThat
-import org.hamcrest.Matchers.hasItem
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
-
+import org.springframework.test.web.servlet.setup.MockMvcBuilders
+import org.springframework.transaction.annotation.Transactional
+import org.springframework.validation.Validator
 
 /**
  * Integration tests for the [BadgeResource] REST controller.
@@ -102,7 +93,7 @@ class BadgeResourceIT {
             .andExpect(jsonPath("$.[*].visible").value(hasItem(DEFAULT_VISIBLE)))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)))
     }
-    
+
     @Test
     @Transactional
     fun getBadge() {

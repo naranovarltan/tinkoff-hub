@@ -2,7 +2,6 @@ package me.antandtim.tinkoff.hub.repository
 
 import me.antandtim.tinkoff.hub.domain.MediaContent
 import org.springframework.data.jpa.repository.JpaRepository
-import org.springframework.data.jpa.repository.Query
 import org.springframework.stereotype.Repository
 
 /**
@@ -10,5 +9,4 @@ import org.springframework.stereotype.Repository
  */
 @Suppress("unused")
 @Repository
-interface MediaContentRepository : JpaRepository<MediaContent, Long> {
-}
+interface MediaContentRepository : JpaRepository<MediaContent, Long>

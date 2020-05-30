@@ -1,13 +1,13 @@
 package me.antandtim.tinkoff.hub.service.dto
 
-import org.junit.jupiter.api.Test
-import org.assertj.core.api.Assertions.assertThat
 import me.antandtim.tinkoff.hub.web.rest.equalsVerifier
+import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Test
 
 class BadgeDTOTest {
 
     @Test
-    fun dtoEqualsVerifier(){
+    fun dtoEqualsVerifier() {
         equalsVerifier(BadgeDTO::class)
         val badgeDTO1 = BadgeDTO()
         badgeDTO1.id = 1L

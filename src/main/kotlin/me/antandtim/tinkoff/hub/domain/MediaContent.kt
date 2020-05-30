@@ -1,11 +1,8 @@
 package me.antandtim.tinkoff.hub.domain
 
-
-
+import java.io.Serializable
 import javax.persistence.*
 import javax.validation.constraints.*
-
-import java.io.Serializable
 
 /**
  * A MediaContent.
@@ -17,7 +14,7 @@ data class MediaContent(
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     var id: Long? = null,
-    
+
     @Lob
     @Column(name = "media", nullable = false)
     var media: ByteArray? = null,
@@ -43,7 +40,6 @@ data class MediaContent(
         ", media='$media'" +
         ", mediaContentType='$mediaContentType'" +
         "}"
-
 
     companion object {
         private const val serialVersionUID = 1L

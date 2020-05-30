@@ -1,15 +1,14 @@
 package me.antandtim.tinkoff.hub.web.rest
 
+import javax.persistence.EntityManager
+import kotlin.test.assertNotNull
 import me.antandtim.tinkoff.hub.TinkoffHubApp
 import me.antandtim.tinkoff.hub.domain.MediaContent
 import me.antandtim.tinkoff.hub.repository.MediaContentRepository
 import me.antandtim.tinkoff.hub.service.MediaContentService
-import me.antandtim.tinkoff.hub.service.dto.MediaContentDTO
 import me.antandtim.tinkoff.hub.service.mapper.MediaContentMapper
 import me.antandtim.tinkoff.hub.web.rest.errors.ExceptionTranslator
-
-import kotlin.test.assertNotNull
-
+import org.hamcrest.Matchers.hasItem
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.MockitoAnnotations
@@ -19,22 +18,14 @@ import org.springframework.data.web.PageableHandlerMethodArgumentResolver
 import org.springframework.http.MediaType
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
 import org.springframework.test.web.servlet.MockMvc
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.util.Base64Utils
 import org.springframework.validation.Validator
-import javax.persistence.EntityManager
-
-import org.assertj.core.api.Assertions.assertThat
-import org.hamcrest.Matchers.hasItem
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
-
 
 /**
  * Integration tests for the [MediaContentResource] REST controller.
@@ -102,7 +93,7 @@ class MediaContentResourceIT {
             .andExpect(jsonPath("$.[*].mediaContentType").value(hasItem(DEFAULT_MEDIA_CONTENT_TYPE)))
             .andExpect(jsonPath("$.[*].media").value(hasItem(Base64Utils.encodeToString(DEFAULT_MEDIA))))
     }
-    
+
     @Test
     @Transactional
     fun getMediaContent() {

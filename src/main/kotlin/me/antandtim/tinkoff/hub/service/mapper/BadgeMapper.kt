@@ -1,9 +1,7 @@
 package me.antandtim.tinkoff.hub.service.mapper
 
-
 import me.antandtim.tinkoff.hub.domain.Badge
 import me.antandtim.tinkoff.hub.service.dto.BadgeDTO
-
 import org.mapstruct.Mapper
 import org.mapstruct.Mapping
 import org.mapstruct.Mappings

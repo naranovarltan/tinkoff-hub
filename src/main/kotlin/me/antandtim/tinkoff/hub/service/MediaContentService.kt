@@ -1,14 +1,12 @@
 package me.antandtim.tinkoff.hub.service
+import java.util.Optional
 import me.antandtim.tinkoff.hub.domain.MediaContent
 import me.antandtim.tinkoff.hub.repository.MediaContentRepository
 import me.antandtim.tinkoff.hub.service.dto.MediaContentDTO
 import me.antandtim.tinkoff.hub.service.mapper.MediaContentMapper
 import org.slf4j.LoggerFactory
-
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-
-import java.util.Optional
 
 /**
  * Service Implementation for managing [MediaContent].
