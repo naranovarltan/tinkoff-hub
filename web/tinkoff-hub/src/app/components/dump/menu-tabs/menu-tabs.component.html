@@ -1,0 +1,8 @@
+<a
+  *ngFor="let tab of menuTabs"
+  [routerLink]="tab.link"
+  routerLinkActive="active"
+  class="menu-tab">
+
+  {{ tab.name }}
+</a>
