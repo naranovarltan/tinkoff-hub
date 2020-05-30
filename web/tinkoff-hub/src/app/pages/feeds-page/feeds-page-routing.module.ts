@@ -7,9 +7,12 @@ const routes: Routes = [
   {
     path: PathConfig.DEFAULT,
     component: FeedsPageComponent,
-    pathMatch: 'full',
-    redirectTo: PathConfig.NEWS,
     children: [
+      {
+        path: '',
+        redirectTo: PathConfig.NEWS,
+        pathMatch: 'full',
+      },
       {
         path: PathConfig.NEWS,
         loadChildren: () => import('../news-page/news-page.module').then(m => m.NewsPageModule),
