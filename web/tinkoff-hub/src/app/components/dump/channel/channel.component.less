@@ -21,7 +21,7 @@
   color: #fff;
   position: absolute;
   padding: 8px 12px;
-  background: linear-gradient(67.14deg, #f34382, #815da6);
+  background: linear-gradient(74.18deg, #FF78A7, #8F75D1);
   line-height: 24px;
   font-size: 13px;
   display: flex;
@@ -34,11 +34,22 @@
   top: 0;
   left: 0;
   border-radius: 8px 0 8px 0;
+  background: none;
 
   img {
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    border: 2px solid #fff;
+  }
+
+  .rewards, .reward {
+    display: flex;
+    align-items: center;
+  }
+
+  .reward {
+    margin-left: 4px;
   }
 }
 
@@ -48,22 +59,24 @@
   border-radius: 0 8px 0 8px;
 }
 
-.stars {
+.subs {
   bottom: 0;
   left: 0;
   border-radius: 0 8px 0 8px;
+
+  &-icon {
+    margin-right: 8px;
+  }
 }
 
-.likes {
+.stars {
   bottom: 0;
   right: 0;
   border-radius: 8px 0 8px 0;
-}
 
-.post-date {
-  font-size: 11px;
-  color: #757575;
-  margin-top: 8px;
+  &-icon {
+    margin-right: 8px;
+  }
 }
 
 .channel-main-info {
