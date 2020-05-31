@@ -1,36 +1,85 @@
 :host {
   display: block;
-  height: 260px;
-  width: 356px;
-  color: #fff;
+  cursor: pointer;
+  width: 320px;
 }
 
-.post {
+.post-extra-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-image: url('/assets/images/cat.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
   border-radius: 8px;
-  padding: 20px 16px;
+  height: 200px;
+  width: 100%;
+  position: relative;
 }
 
-.post-number {
+.badge {
+  color: #fff;
+  position: absolute;
+  padding: 8px 12px;
+  background: linear-gradient(67.14deg, #ffe52b, #00ac45);
+  line-height: 24px;
   font-size: 13px;
-  margin-bottom: 32px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 
-.post-title {
-  font-size: 20px;
-  font-weight: 500;
+.author {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px 0 8px 0;
+
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
 }
 
-.post-actions {
+.channel-name {
+  top: 0;
+  right: 0;
+  border-radius: 0 8px 0 8px;
+}
+
+.stars {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 8px 0 8px;
+}
+
+.likes {
+  bottom: 0;
+  right: 0;
+  border-radius: 8px 0 8px 0;
+}
+
+.post-date {
+  font-size: 11px;
+  color: #757575;
+  margin-top: 8px;
+}
+
+.post-main-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
-}
+  margin-top: 8px;
 
+  .post-info {
+    .post-title {
+      font-size: 17px;
+      font-weight: bold;
+    }
+    .post-description {
+      font-size: 15px;
+      color: #757575;
+    }
+  }
+}
