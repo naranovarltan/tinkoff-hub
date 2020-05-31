@@ -26,7 +26,36 @@
     <div class="post">
       <div class="post-title">Заголовок поста</div>
       <app-post-card class="post-card"></app-post-card>
-      <div class="post-sub-title">Подзаголовок поста</div>
+      <div class="post-sub-title">
+        <div class="post-sub-title__text">Подзаголовок поста</div>
+        <div class="post-sub-title__actions">
+          <div class="comment">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="16" fill="#FFDD2D"/>
+              <path d="M15.5 9C11.3574 9 8 11.9034 8 15.4867C8 17.0335 8.62695 18.4493 9.66992 19.5626C9.30371 21.1344 8.0791 22.5347 8.06445 22.5502C8 22.622 7.98242 22.728 8.02051 22.8216C8.05859 22.9151 8.14062 22.9713 8.23438 22.9713C10.1768 22.9713 11.6328 21.9795 12.3535 21.3683C13.3115 21.7519 14.375 21.9733 15.5 21.9733C19.6426 21.9733 23 19.0699 23 15.4867C23 11.9034 19.6426 9 15.5 9ZM11.75 16.4846C11.2314 16.4846 10.8125 16.0386 10.8125 15.4867C10.8125 14.9347 11.2314 14.4887 11.75 14.4887C12.2686 14.4887 12.6875 14.9347 12.6875 15.4867C12.6875 16.0386 12.2686 16.4846 11.75 16.4846ZM15.5 16.4846C14.9814 16.4846 14.5625 16.0386 14.5625 15.4867C14.5625 14.9347 14.9814 14.4887 15.5 14.4887C16.0186 14.4887 16.4375 14.9347 16.4375 15.4867C16.4375 16.0386 16.0186 16.4846 15.5 16.4846ZM19.25 16.4846C18.7314 16.4846 18.3125 16.0386 18.3125 15.4867C18.3125 14.9347 18.7314 14.4887 19.25 14.4887C19.7686 14.4887 20.1875 14.9347 20.1875 15.4867C20.1875 16.0386 19.7686 16.4846 19.25 16.4846Z" fill="#333333"/>
+            </svg>
+          </div>
+          <div class="share-menu">
+            <tui-hosted-dropdown align="left" [content]="dropdown" [(opened)]="opened">
+              <span class="share">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="16" fill="#FFDD2D"/>
+                  <path d="M24.7241 13.9324L18.8802 9.18284C18.3687 8.76706 17.5625 9.10459 17.5625 9.75046V12.2521C12.2291 12.3096 8 13.3156 8 18.0727C8 19.9927 9.31421 21.8948 10.7669 22.8893C11.2202 23.1996 11.8663 22.8101 11.6992 22.3071C10.1936 17.7754 12.4133 16.5724 17.5625 16.5026V19.25C17.5625 19.8969 18.3693 20.2329 18.8802 19.8176L24.7241 15.0676C25.0917 14.7688 25.0922 14.2316 24.7241 13.9324Z" fill="#333333"/>
+                </svg>
+              </span>
+            </tui-hosted-dropdown>
+
+            <ng-template #dropdown="polymorpheus" polymorpheus>
+              <tui-menu-items
+                [items]="items"
+                (mouseClick)="onClick()"
+                (keyDownEnter)="onClick()"
+                (keyDownSpace)="onClick()"
+              ></tui-menu-items>
+            </ng-template>
+          </div>
+        </div>
+      </div>
       <div class="article">
         <div class="article-title">Заголовок обзаца</div>
         <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad cum dolores esse eum impedit ipsa ipsum minus natus numquam, rem sed, voluptas voluptates. Accusantium ad alias harum itaque officiis, quam quia reprehenderit. Dolores error illo in incidunt iste itaque, molestiae nisi nobis nulla pariatur quidem ratione sequi sint ut?</div>
@@ -34,6 +63,29 @@
       <div class="article">
         <div class="article-title">Заголовок обзаца</div>
         <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad cum dolores esse eum impedit ipsa ipsum minus natus numquam, rem sed, voluptas voluptates. Accusantium ad alias harum itaque officiis, quam quia reprehenderit. Dolores error illo in incidunt iste itaque, molestiae nisi nobis nulla pariatur quidem ratione sequi sint ut?</div>
+      </div>
+    </div>
+  </div>
+  <div class="feedback-wrapper">
+    <div class="feedback">
+      <div class="feedback__title">
+        Как тебе пост
+      </div>
+      <div class="feedback__actions">
+        <div class="like">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="24" fill="#ECF1F7"/>
+            <path d="M24.469 19.3626C21.255 14.3981 14.75 17.1026 14.75 22.5106C14.75 26.5716 23.668 32.9241 24.469 33.7501C25.2755 32.9241 33.75 26.5716 33.75 22.5106C33.75 17.1436 27.689 14.3981 24.469 19.3626Z" fill="#1771E6"/>
+          </svg>
+        </div>
+        <div class="dislike">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="24" fill="#ECF1F7"/>
+            <path d="M30.9541 32.2501C30.8635 32.2501 30.7737 32.2322 30.69 32.1974C30.6063 32.1626 30.5304 32.1116 30.4664 32.0473L14.7468 16.2348C14.6182 16.1054 14.5463 15.9303 14.5469 15.748C14.5474 15.5656 14.6204 15.3909 14.7498 15.2624C14.8791 15.1338 15.0542 15.0619 15.2366 15.0625C15.4189 15.0631 15.5936 15.136 15.7222 15.2654L31.4414 31.0779C31.5371 31.1742 31.6022 31.2967 31.6284 31.4299C31.6546 31.5631 31.6408 31.7011 31.5887 31.8265C31.5365 31.9518 31.4485 32.059 31.3356 32.1344C31.2226 32.2098 31.0899 32.25 30.9541 32.2501Z" fill="#1771E6"/>
+            <path d="M28.6796 16.4375C26.7852 16.4375 25.4738 17.504 24.7098 18.3926C24.6856 18.4204 24.6557 18.4428 24.6221 18.4581C24.5885 18.4734 24.552 18.4813 24.5151 18.4813C24.4782 18.4813 24.4417 18.4734 24.4082 18.4581C24.3746 18.4428 24.3447 18.4204 24.3205 18.3926C23.5565 17.504 22.2446 16.4375 20.3506 16.4375C19.8994 16.4373 19.4507 16.503 19.0186 16.6326L30.5827 28.2642C30.7116 28.1164 30.8277 27.9789 30.9325 27.8517C32.6513 25.757 33.4741 23.6068 33.4509 21.2775C33.4255 18.6087 31.2844 16.4375 28.6796 16.4375Z" fill="#1771E6"/>
+            <path d="M15.9653 19.4084C15.7163 20.0003 15.5849 20.6351 15.5786 21.2772C15.5554 23.6065 16.3791 25.7567 18.097 27.8514C18.9035 28.8341 20.3658 30.4059 23.7427 32.6983C23.9705 32.8541 24.2401 32.9375 24.5161 32.9375C24.7921 32.9375 25.0617 32.8541 25.2895 32.6983C26.164 32.1044 26.9095 31.5596 27.5488 31.0603L15.9653 19.4084Z" fill="#1771E6"/>
+          </svg>
+        </div>
       </div>
     </div>
   </div>

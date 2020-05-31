@@ -11,7 +11,7 @@ export class FeedsHeaderComponent {
 
   public opened = false;
 
-  onClick() {
+  public onClick() {
     this.opened = false;
   }
 }

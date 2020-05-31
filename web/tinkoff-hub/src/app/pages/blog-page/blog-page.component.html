@@ -1,5 +1,8 @@
 <div class="tui-container tui-container_adaptive">
-  <p>
-    blog-page works!
-  </p>
+  <div>
+    <a [routerLink]="'create-post'">Добавить пост</a>
+    <a [routerLink]="'blog-posts'">Мои посты</a>
+  </div>
+
+  <router-outlet></router-outlet>
 </div>

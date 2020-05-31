@@ -8,6 +8,12 @@ import { Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostPageComponent implements OnInit {
+  public items = [
+    'в слак',
+    'на почту'
+  ];
+
+  public opened = false;
 
   constructor(private router: Router) {}
 
@@ -18,4 +24,7 @@ export class PostPageComponent implements OnInit {
     this.router.navigateByUrl('/feeds/news');
   }
 
+  public onClick() {
+    this.opened = false;
+  }
 }
