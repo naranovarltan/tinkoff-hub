@@ -6,11 +6,13 @@ import { FeedsHeaderComponent } from './smart/feeds-header/feeds-header.componen
 import { MenuTabsComponent } from './dump/menu-tabs/menu-tabs.component';
 import { RouterModule } from '@angular/router';
 import { PostComponent } from './dump/post/post.component';
+import { ChannelComponent } from './dump/channel/channel.component';
 
 const COMPONENTS = [
   FeedsHeaderComponent,
   MenuTabsComponent,
-  PostComponent
+  PostComponent,
+  ChannelComponent,
 ];
 
 const TUI_MODULES = [

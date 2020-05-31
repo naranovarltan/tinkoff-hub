@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { ChannelsPageRoutingModule } from './channels-page-routing.module';
 import { ChannelsPageComponent } from './channels-page.component';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [ChannelsPageComponent],
   imports: [
     CommonModule,
-    ChannelsPageRoutingModule
+    ChannelsPageRoutingModule,
+    ComponentsModule,
   ]
 })
-export class ChannelsPageModule { }
+export class ChannelsPageModule {}

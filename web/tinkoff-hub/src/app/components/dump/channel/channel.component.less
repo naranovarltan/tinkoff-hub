@@ -1,0 +1,81 @@
+:host {
+  display: block;
+  cursor: pointer;
+  width: 320px;
+}
+
+.channel-extra-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('/assets/images/cat.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+
+.badge {
+  color: #fff;
+  position: absolute;
+  padding: 8px 12px;
+  background: linear-gradient(67.14deg, #f34382, #815da6);
+  line-height: 24px;
+  font-size: 13px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.author {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px 0 8px 0;
+
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+}
+
+.channel-name {
+  top: 0;
+  right: 0;
+  border-radius: 0 8px 0 8px;
+}
+
+.stars {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 8px 0 8px;
+}
+
+.likes {
+  bottom: 0;
+  right: 0;
+  border-radius: 8px 0 8px 0;
+}
+
+.post-date {
+  font-size: 11px;
+  color: #757575;
+  margin-top: 8px;
+}
+
+.channel-main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+
+  .channel-info {
+    .channel-description {
+      font-size: 15px;
+      color: #757575;
+    }
+  }
+}
