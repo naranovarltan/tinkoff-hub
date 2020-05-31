@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { tuiIconPin, tuiIconArrowRight } from '@tinkoff-ui/angular-icons';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -8,6 +7,11 @@ import { tuiIconPin, tuiIconArrowRight } from '@tinkoff-ui/angular-icons';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostComponent {
-  public tuiIconPin = tuiIconPin;
-  public tuiIconArrowRight = tuiIconArrowRight;
+  @Output() navigateToPost = new EventEmitter<string>();
+
+  public onNavigateToPost(event: Event): void {
+    event.stopPropagation();
+
+    this.navigateToPost.emit('123');
+  }
 }

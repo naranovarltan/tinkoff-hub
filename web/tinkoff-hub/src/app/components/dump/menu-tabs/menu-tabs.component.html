@@ -4,9 +4,12 @@
       *ngFor="let tab of menuTabs"
       [routerLink]="tab.link"
       routerLinkActive="active"
+      class="tab"
       tuiTab>
 
-      {{ tab.name }}
+      <span class="tab__name">{{ tab.name }}</span>
+
+      <tui-badge *ngIf="tab.count > 0" [value]="tab.count" status="primary" class="tab__count"></tui-badge>
     </a>
   </div>
 </tui-tabs>

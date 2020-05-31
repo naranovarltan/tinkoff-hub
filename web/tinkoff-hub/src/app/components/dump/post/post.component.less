@@ -1,82 +1,6 @@
 :host {
   display: block;
   cursor: pointer;
-  width: 320px;
-}
-
-.post-extra-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url('/assets/images/cat.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 8px;
-  height: 200px;
-  width: 100%;
-  position: relative;
-}
-
-.badge {
-  color: #fff;
-  position: absolute;
-  padding: 8px 12px;
-  background: linear-gradient(79.26deg, #81C785 36.32%, #FFD450 158.36%), linear-gradient(73.49deg, #FFE52B -22.06%, #00AC45 104.35%);
-  line-height: 24px;
-  font-size: 13px;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-}
-
-.author {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 8px 0 8px 0;
-  background: none;
-
-  img {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-  }
-
-  .rewards, .reward {
-    display: flex;
-    align-items: center;
-  }
-
-  .reward {
-    margin-left: 4px;
-  }
-}
-
-.channel-name {
-  top: 0;
-  right: 0;
-  border-radius: 0 8px 0 8px;
-}
-
-.stars {
-  bottom: 0;
-  left: 0;
-  border-radius: 0 8px 0 8px;
-
-  &-icon {
-    margin-right: 8px;
-  }
-}
-
-.likes {
-  bottom: 0;
-  right: 0;
-  border-radius: 8px 0 8px 0;
-
-  &-icon {
-    margin-right: 8px;
-  }
 }
 
 .post-date {
@@ -85,20 +9,16 @@
   margin-top: 8px;
 }
 
-.post-main-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.post-info {
   margin-top: 8px;
 
-  .post-info {
-    .post-title {
-      font-size: 17px;
-      font-weight: bold;
-    }
-    .post-description {
-      font-size: 15px;
-      color: #757575;
-    }
+  .post-title {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .post-description {
+    font-size: 15px;
+    color: #757575;
   }
 }

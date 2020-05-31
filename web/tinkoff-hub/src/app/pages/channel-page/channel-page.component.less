@@ -1,0 +1,76 @@
+:host {
+  display: block;
+}
+
+.back-btn {
+  display: flex;
+  font-size: 13px;
+  margin-bottom: 8px;
+  cursor: pointer;
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__text {
+    color: #959BA4;
+  }
+}
+
+.opened-channels {
+  margin-bottom: 16px;
+
+  &-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  &-names {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+
+    .channel-name {
+      display: flex;
+      align-items: center;
+      padding: 4px 8px;
+      font-size: 13px;
+      border: 2px solid #616871;
+      border-radius: 4px;
+      margin-right: 8px;
+      color: #ffffff;
+      background: linear-gradient(90deg, #FF78A7 0%, #8F75D1 100%);
+      position: relative;
+
+      &-text {
+        line-height: 16px;
+        padding-right: 16px;
+      }
+
+      &-icon {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: 8px;
+        top: 2px;
+      }
+    }
+  }
+}
+
+.channels {
+  margin-bottom: 64px;
+
+  .channel {
+    .channel-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.posts {
+  margin-bottom: 64px;
+}

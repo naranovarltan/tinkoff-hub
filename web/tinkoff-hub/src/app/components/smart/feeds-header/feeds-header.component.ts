@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-feeds-header',
@@ -6,11 +6,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./feeds-header.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FeedsHeaderComponent implements OnInit {
+export class FeedsHeaderComponent {
+  public items = ['Мой блог', 'Выбрать канал'];
 
-  constructor() { }
+  public opened = false;
 
-  ngOnInit(): void {
+  onClick() {
+    this.opened = false;
   }
-
 }

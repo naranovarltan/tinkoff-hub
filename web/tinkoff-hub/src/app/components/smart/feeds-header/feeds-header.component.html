@@ -1,1 +1,39 @@
-<p>feeds-header works!</p>
+<div class="tui-container tui-container_adaptive header">
+  <div class="user">
+    <div class="avatar">
+      <img src="/assets/images/cat.jpg" alt="">
+    </div>
+    <div class="rewards">
+      <img src="/assets/images/cat.jpg" alt="" class="reward">
+      <img src="/assets/images/cat.jpg" alt="" class="reward">
+      <img src="/assets/images/cat.jpg" alt="" class="reward">
+    </div>
+    <div class="status">
+
+    </div>
+  </div>
+  <div class="actions">
+
+    <tui-hosted-dropdown align="left" [content]="dropdown" [(opened)]="opened">
+      <button type="button" size="s" class="add-post-btn" tuiButton>
+        <span class="add-post-btn__text">Добавить пост</span>
+        <span [class.add-post-btn__icon_rotated]="opened" class="add-post-btn__icon">
+        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.234315 1.36569C-0.0781049 1.05327 -0.0781049 0.546734 0.234315 0.234315C0.546734 -0.0781049 1.05327 -0.0781049 1.36569 0.234315L4 2.86863L6.63431 0.234315C6.94673 -0.0781049 7.45327 -0.0781049 7.76569 0.234315C8.0781 0.546734 8.0781 1.05327 7.76569 1.36569L5.13137 4C4.50653 4.62484 3.49347 4.62484 2.86863 4L0.234315 1.36569Z"
+                fill="#333333"/>
+        </svg>
+      </span>
+      </button>
+    </tui-hosted-dropdown>
+    <ng-template #dropdown="polymorpheus" polymorpheus>
+      <tui-menu-items
+        [items]="items"
+        (mouseClick)="onClick()"
+        (keyDownEnter)="onClick()"
+        (keyDownSpace)="onClick()"
+      ></tui-menu-items>
+    </ng-template>
+  </div>
+</div>
+

@@ -18,17 +18,29 @@ const routes: Routes = [
         loadChildren: () => import('../news-page/news-page.module').then(m => m.NewsPageModule),
       },
       {
+        path: `${PathConfig.NEWS}/:id`,
+        loadChildren: () => import('../post-page/post-page.module').then(m => m.PostPageModule),
+      },
+      {
         path: PathConfig.WORKING_NEWS,
         loadChildren: () => import('../working-news-page/working-news-page.module').then(m => m.WorkingNewsPageModule),
+      },
+      {
+        path: `${PathConfig.WORKING_NEWS}/:id`,
+        loadChildren: () => import('../post-page/post-page.module').then(m => m.PostPageModule),
       },
       {
         path: PathConfig.CHANNELS,
         loadChildren: () => import('../channels-page/channels-page.module').then(m => m.ChannelsPageModule),
       },
       {
+        path: `${PathConfig.CHANNELS}/:id`,
+        loadChildren: () => import('../channel-page/channel-page.module').then(m => m.ChannelPageModule),
+      },
+      {
         path: PathConfig.BLOG,
         loadChildren: () => import('../blog-page/blog-page.module').then(m => m.BlogPageModule),
-      },
+      }
     ]
   }
 ];

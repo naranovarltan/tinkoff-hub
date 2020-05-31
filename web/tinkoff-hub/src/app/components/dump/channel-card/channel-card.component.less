@@ -1,0 +1,84 @@
+:host {
+  display: block;
+  cursor: pointer;
+}
+
+.channel-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('/assets/images/cat.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  min-height: 200px;
+  width: 100%;
+  position: relative;
+}
+
+.badge {
+  color: #fff;
+  position: absolute;
+  padding: 4px 8px;
+  background: linear-gradient(74.18deg, #FF78A7, #8F75D1);
+  line-height: 24px;
+  font-size: 13px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.author {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px 0 8px 0;
+  background: none;
+
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+
+  .rewards, .reward {
+    display: flex;
+    align-items: center;
+  }
+
+  .reward {
+    margin-left: 4px;
+  }
+}
+
+.channel-name {
+  top: 0;
+  right: 0;
+  border-radius: 0 8px 0 8px;
+}
+
+.subs {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 8px 0 8px;
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+}
+
+.stars {
+  bottom: 0;
+  right: 0;
+  border-radius: 8px 0 8px 0;
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+}

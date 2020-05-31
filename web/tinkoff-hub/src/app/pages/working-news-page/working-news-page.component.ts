@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-working-news-page',
@@ -8,9 +9,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class WorkingNewsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  public navigateToPost(postId: string): void {
+    this.router.navigateByUrl(`/feeds/working-news/${postId}`);
+  }
 }

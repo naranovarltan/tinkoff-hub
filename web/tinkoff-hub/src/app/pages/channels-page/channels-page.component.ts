@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-channels-page',
@@ -8,9 +9,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class ChannelsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
   }
 
+  public onNavigateToChannel(channelId: string): void {
+    this.router.navigateByUrl(`/feeds/channels/${channelId}`);
+  }
 }

@@ -2,17 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { WorkingNewsPageRoutingModule } from './working-news-page-routing.module';
-import { WorkingNewsPageComponent } from './working-news-page.component';
+import { PostPageRoutingModule } from './post-page-routing.module';
+import { PostPageComponent } from './post-page.component';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
-  declarations: [WorkingNewsPageComponent],
+  declarations: [PostPageComponent],
   imports: [
     CommonModule,
+    PostPageRoutingModule,
     RouterModule,
-    WorkingNewsPageRoutingModule,
     ComponentsModule,
   ]
 })
-export class WorkingNewsPageModule { }
+export class PostPageModule {
+}

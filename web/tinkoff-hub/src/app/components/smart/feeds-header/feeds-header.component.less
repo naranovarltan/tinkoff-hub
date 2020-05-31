@@ -1,0 +1,69 @@
+:host {
+  display: block;
+  background-color: #F5F5F6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.user {
+  display: flex;
+}
+
+.avatar {
+  display: flex;
+  margin-right: 4px;
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.rewards {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #E7E8EA;
+  }
+}
+
+.reward {
+  &:nth-child(1) {
+    z-index: 3;
+  }
+  &:nth-child(2) {
+    z-index: 2;
+    margin-left: -11px;
+  }
+  &:nth-child(3) {
+    z-index: 1;
+    margin-left: -11px;
+  }
+}
+
+.add-post-btn {
+  &__text {
+    margin-right: 8px;
+  }
+
+  &__icon {
+    transition: 0.3s;
+
+    &_rotated {
+      transform: rotate(180deg);
+    }
+  }
+}
