@@ -1,1 +1,36 @@
-<p>create-post works!</p>
+<section class="create-post-page">
+  <form [formGroup]="form" class="form">
+    <div class="form__header">Шапка поста</div>
+    <tui-input
+      [labelOutside]="true"
+      formControlName="header"
+      ngModel
+      class="form__input">
+
+      Название
+    </tui-input>
+    <tui-input
+      [labelOutside]="true"
+      formControlName="shortDescription"
+      ngModel
+      class="form__input">
+
+      Краткое описание
+    </tui-input>
+    <tui-input
+      [labelOutside]="true"
+      formControlName="description"
+      ngModel
+      class="form__input">
+
+      Описание
+    </tui-input>
+  </form>
+  <div class="content-post">
+    <div class="content-post__header">Содержание поста</div>
+    <ckeditor (dataChange)="setValue($event)" data="<p>Hello, world!</p>"></ckeditor>
+  </div>
+  <div class="actions">
+    <button [disabled]="form.invalid" (click)="onSubmit()" tuiButton>Отправить</button>
+  </div>
+</section>

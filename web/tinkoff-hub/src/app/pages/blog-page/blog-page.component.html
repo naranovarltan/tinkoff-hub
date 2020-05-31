@@ -1,7 +1,14 @@
 <div class="tui-container tui-container_adaptive">
-  <div>
-    <a [routerLink]="'create-post'">Добавить пост</a>
-    <a [routerLink]="'blog-posts'">Мои посты</a>
+  <div class="navigations">
+    <a [routerLink]="'create-post'" routerLinkActive="active" class="navigations__link">Добавить пост</a>
+    <a
+      [routerLink]="'blog-posts'"
+      routerLinkActive="active"
+      class="navigations__link">
+
+      Мои посты
+      <tui-badge [value]="0" status="light" size="s"></tui-badge>
+    </a>
   </div>
 
   <router-outlet></router-outlet>

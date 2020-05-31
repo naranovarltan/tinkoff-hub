@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CKEditorModule } from 'ckeditor4-angular';
+import { TuiInputModule, TuiBadgeModule } from '@tinkoff-ui/angular-kit';
+import { TuiButtonsModule } from '@tinkoff-ui/angular-core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BlogPageRoutingModule } from './blog-page-routing.module';
 import { BlogPageComponent } from './blog-page.component';
@@ -15,6 +19,12 @@ import { ComponentsModule } from '../../components/components.module';
     BlogPageRoutingModule,
     RouterModule,
     ComponentsModule,
+    CKEditorModule,
+    TuiInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TuiButtonsModule,
+    TuiBadgeModule,
   ]
 })
 export class BlogPageModule { }

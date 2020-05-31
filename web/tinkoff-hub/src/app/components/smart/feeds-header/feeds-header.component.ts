@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feeds-header',
@@ -7,11 +8,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FeedsHeaderComponent {
-  public items = ['Мой блог', 'Выбрать канал'];
+  public items = ['Мой блог'];
 
   public opened = false;
 
+  constructor(private router: Router) {}
+
   public onClick() {
     this.opened = false;
+
+    this.router.navigateByUrl('feeds/blog/create-post');
   }
 }
